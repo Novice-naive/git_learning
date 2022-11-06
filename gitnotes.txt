@@ -39,11 +39,15 @@ Key都添加到GitHub，就可以在每台电脑上往GitHub推送了。
     Note：gitbash生成ssh一定要在用户主目录即“C：USER/nianmounaweixiao/.ssh下生成！！！！
 	在depository的目录下面生成的ssh是没用的！！！
 3. 想要把本地库和github的远程库关联，在本地仓库下运行(origin 一般为远程库的别名)
-$git remote add origin git@github.com:<github username>/<github depository name>.git
-$git push -u origin master, 当前分支master推送到远程。(只有第一次push要加-u)
-4. 想要解除和远程库的关联，先$git remote -v 查看远程库的信息，然后根据名字用
-$ git remote rm <name> 即可
+    $git remote add origin git@github.com:<github username>/<github depository name>.git
+    $git push -u origin master, 当前分支master推送到远程。(只有第一次push要加-u)
+4. 想要解除和远程库的关联，先$git remote -v 查看远程库的信息，然后$ git remote rm <name>
+5. 如果先有远程库，然后关联本地，用$git clone git@gitlab.oit.duke.edu:sl578/ece550d-autograder.git
+    Note: git clone可以有多个地址，上面的是用ssh，还可以用http协议地址，不过很慢而且要每次输入口令
 
+
+分支管理
+1.
 
 
 
