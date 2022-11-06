@@ -3,9 +3,9 @@ Git notes
     $ git config --global user.email "email@example.com"
 1. First create the git depository by : $git init, in a directory
 2. use $git add, to add (only one file) to git depository and then use
-   $git commit -m "2022.10.7-KeanShen-readme" to submit (all the adding file)
-   to the depository. information added after the -m could helpful when 
-   finding previous version of file. 
+$git commit -m "2022.10.7-KeanShen-readme" to submit (all the adding file)
+to the depository. information added after the -m could helpful when 
+finding previous version of file. 
 	Note: $git commit could only commit the added file!!!
 	Note: if deleted or rename a file, use $git commit -a
 	Note: since $git log could tell config name and time, don't
@@ -13,12 +13,16 @@ Git notes
 	Note: add only submit the file to "stage", commit submit the file to "master"
 	      stage is the temporary storage place.  
 
+
+时光机穿梭
 3. use $git status, to check if there is modified but not commit files
 4. use $git diff <filename>, to look up the modified content
 5. use $git log, to see the previous submit history (has previous version)
 6. use $git reflog, to see the command history and future version to jump 
 7. use $git reset --hard <version_number> to jump to the previous or future
-   version of depository
+version of depository
 	Note: version_number dont need to complete but at least first five bits
 	Note: version_number could be HEAD^(last version), HEAD~100(100geqian)
-
+8. $git checkout -- <file>  or  $git restore <file>  可以丢弃工作区的修改(撤销还未add的error)
+    $git reset HEAD <file> or $git restore --staged <file> 可以把暂存区的修改撤销掉（unstage), 
+重新放回工作区. 相当于回到了上一行的阶段。
