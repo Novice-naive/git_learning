@@ -26,3 +26,33 @@ version of depository
 8. $git checkout -- <file>  or  $git restore <file>  可以丢弃工作区的修改(撤销还未add的error)
     $git reset HEAD <file> or $git restore --staged <file> 可以把暂存区的修改撤销掉（unstage), 
 重新放回工作区. 相当于回到了上一行的阶段。
+9. $rm <file> then $git rm <file> then $git commit, could delete file from master
+
+
+远程仓库
+1. Git是分布式版本控制系统，同一个Git仓库，可以分布到不同的机器上。而Github提供仓库托管服务，
+可以免费获得Git远程仓库。
+2. 由于你的本地Git仓库和GitHub仓库之间的传输是通过SSH加密的，所以要用gitbash目录生成
+SSH key：$ssh-keygen -t rsa -C "youremail@example.com"。一路回车后会生成id_rsa(密钥) 和
+id_rsa.pub(公钥)。在github的account settings里add SSH key添加公钥即可。只要把每台电脑的
+Key都添加到GitHub，就可以在每台电脑上往GitHub推送了。 
+    Note：gitbash生成ssh一定要在用户主目录即“C：USER/nianmounaweixiao/.ssh下生成！！！！
+	在depository的目录下面生成的ssh是没用的！！！
+3. 想要把本地库和github的远程库关联，在本地仓库下运行(origin 一般为远程库的别名)
+$git remote add origin git@github.com:<github username>/<github depository name>.git
+$git push -u origin master, 当前分支master推送到远程。(只有第一次push要加-u)
+4. 想要解除和远程库的关联，先$git remote -v 查看远程库的信息，然后根据名字用
+$ git remote rm <name> 即可
+
+
+
+
+
+
+
+
+
+
+
+
+
